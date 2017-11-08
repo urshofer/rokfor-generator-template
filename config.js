@@ -21,7 +21,15 @@ module.exports = {
   cover : [
 	{
 		template    : 'page/cover.tex',
-		controller  : function(module){return({Title: "Dies ist der Titel", Autor: "Autor"});}
+		controller  : function(module){
+
+			return({
+				Title:   "The Generator", 
+				Subject: "About generating pdf documents", 
+				Author:  "Max Muster",
+				Abstract: module.md2Tex("Someting in __markdown__")
+			});
+		}
 	}
   ]  
 }
